@@ -1,0 +1,40 @@
+{
+    "name": "kijs/geoservices",
+    "description": "Ģeodatu servisu pārvaldība",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Edgars Košovojs",
+            "email": "edgars.kosovojs@kartes.lv"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "awurth/slim-validation": "^3.2",
+        "monolog/monolog": "^2.0",
+        "robmorgan/phinx": "^0.11.3",
+        "slim/slim": "3.*",
+        "vlucas/phpdotenv": "^4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Geoservices\\": "app/"
+        }
+	},
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true
+    },
+    "scripts": {
+        "start": "php -S localhost:8080 -t public",
+        "test": "phpunit"
+    }
+}
